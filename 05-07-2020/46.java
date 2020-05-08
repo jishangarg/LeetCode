@@ -32,13 +32,13 @@ class Solution {
     {
         if(depth==nums.length)
         {
-            ansl.add(new ArrayList<Integer>());
+            ansl.add(new ArrayList<Integer>(res));
             
-            for(int y=0;y<res.size();y++)
-            {
-                ansl.get(ansl.size()-1).add(0);
-                ansl.get(ansl.size()-1).set(y,res.get(y));
-            }
+            // for(int y=0;y<res.size();y++)
+            // {
+            //     ansl.get(ansl.size()-1).add(0);
+            //     ansl.get(ansl.size()-1).set(y,res.get(y));
+            // }
             
             System.out.println("end");
             for(int m: res)
