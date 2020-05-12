@@ -77,6 +77,11 @@ set.remove("Ravi");
 ansl.add(new ArrayList<Integer>(res))    //res is list
 //call by reference by default otherwise
 
--------clone the array
+
+----------ARRAYS
+(clone the array)
 int[] a=new int[n];
 int[] b=a.clone();
+
+Arrays.fill(ar, 10); 
+
