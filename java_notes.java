@@ -55,6 +55,9 @@ for(int i: map.keySet())
         {
 	}
 
+int[]arr=map.values()
+int[] arr=map.keySet()
+
 -------------Queue-----------
 import java.util.LinkedList;
 import java.util.Queue;
