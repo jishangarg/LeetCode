@@ -86,5 +86,20 @@ ansl.add(new ArrayList<Integer>(res))    //res is list
 int[] a=new int[n];
 int[] b=a.clone();
 
+//sort
+Arrays.sort(arr);
+
+intervals[][]
+Arrays.sort(intervals,(arr1,arr2)->Integer.compare(arr1[0],arr2[0])
+
+
+
 Arrays.fill(ar, 10); 
+
+
+
+//Arraylist to array
+list.toArray(new int[size]);
+
+
 
