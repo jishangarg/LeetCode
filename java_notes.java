@@ -103,3 +103,13 @@ list.toArray(new int[size]);
 
 
 
+
+//read arrow fxn javascript
+//master theorem recursion
+//rachit jain ques
+//segment tree
+//counting sort
+//use js to send linkedin requests
+
+
+
