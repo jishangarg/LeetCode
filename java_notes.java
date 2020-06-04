@@ -95,7 +95,7 @@ Arrays.sort(intervals,(arr1,arr2)->Integer.compare(arr1[0],arr2[0])
 
 
 Arrays.fill(ar, 10); 
-
+int retVal = Arrays.binarySearch(arr,54); //arr is sorted array
 
 
 //Arraylist to array
