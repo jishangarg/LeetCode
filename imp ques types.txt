@@ -1,0 +1,8 @@
+-----stock price
+
+
+-----rain water
+
+-----palindrome
+
+-----max area rect and square
