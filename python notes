@@ -1,0 +1,348 @@
+-----------------------ArrayList-------------------------
+
+my_list = []                        # Create an empty list
+my_list = [1, 2, 3]                  # Create a list with initial values
+
+my_list.append(4)                    # Add an element to the end of the list
+my_list.insert(0, 0)                 # Insert an element at a specific index
+
+value = my_list[2]                   # Access an element by index
+
+my_list[0] = 10                      # Update the value of an element
+
+my_list.pop()                        # Remove and return the last element
+my_list.pop(2)                       # Remove and return the element at a specific index
+my_list.remove(3)                    # Remove the first occurrence of a specific value
+
+length = len(my_list)                # Get the length of the list
+
+for element in my_list:              # Iterate over the elements of the list
+    print(element)
+
+
+-----------------------Set-------------------------
+
+my_set = set()                        # Create an empty set
+my_set = {1, 2, 3}                     # Create a set with initial values
+
+my_set.add(4)                          # Add a single element to the set
+my_set.update([5, 6, 7])                # Add multiple elements to the set
+
+my_set.remove(3)                       # Remove a specific element from the set
+my_set.discard(2)                       # Remove a specific element, but ignores if not present
+my_set.pop()                            # Remove and return an arbitrary element from the set
+my_set.clear()                          # Remove all elements from the set
+
+other_set = {4, 5, 6}
+union_set = my_set.union(other_set)               # Perform the union of two sets
+intersection_set = my_set.intersection(other_set) # Perform the intersection of two sets
+difference_set = my_set.difference(other_set)     # Perform the difference of two sets
+
+size = len(my_set)                      # Get the number of elements in the set
+exists = 4 in my_set                    # Check if an element exists in the set
+
+for element in my_set:                  # Iterate over the elements of the set
+    print(element)
+
+-----------------------Map-------------------------
+
+my_dict = {}                            # Create an empty dictionary
+my_dict = {'key1': 'value1', 'key2': 'value2'}   # Create a dictionary with initial key-value pairs
+
+my_dict['key3'] = 'value3'              # Add a new key-value pair to the dictionary
+my_dict.update({'key4': 'value4', 'key5': 'value5'})  # Add multiple key-value pairs to the dictionary
+
+value = my_dict['key1']                 # Access the value associated with a specific key
+
+my_dict['key1'] = 'new_value'           # Update the value associated with a specific key
+
+del my_dict['key2']                     # Remove a specific key-value pair from the dictionary
+my_dict.pop('key3')                     # Remove and return the value associated with a specific key
+my_dict.clear()                         # Remove all key-value pairs from the dictionary
+
+size = len(my_dict)                     # Get the number of key-value pairs in the dictionary
+
+for key in my_dict:                     # Iterate over the keys of the dictionary
+    value = my_dict[key]                # Access the value associated with each key
+    print(key, value)
+
+for key, value in my_dict.items():      # Iterate over both keys and values of the dictionary
+    print(key, value)
+
+-----------------------LinkedList-------------------------
+
+from collections import deque
+
+my_linked_list = deque()                        # Create an empty linked list
+my_linked_list = deque([1, 2, 3])                # Create a linked list with initial values
+
+my_linked_list.append(4)                         # Add an element to the end of the linked list
+my_linked_list.appendleft(0)                     # Add an element to the beginning of the linked list
+
+my_linked_list.pop()                             # Remove and return the last element from the linked list
+my_linked_list.popleft()                         # Remove and return the first element from the linked list
+
+value = my_linked_list[2]                        # Access an element by index
+
+my_linked_list[0] = 10                           # Update the value of an element
+
+length = len(my_linked_list)                     # Get the length of the linked list
+
+for element in my_linked_list:                   # Iterate over the elements of the linked list
+    print(element)
+
+-----------------------Queue-------------------------
+
+import queue
+
+my_queue = queue.Queue()                 # Create an empty queue
+
+my_queue.put(1)                          # Add an element to the rear of the queue
+my_queue.put(2)                          # Add another element to the rear of the queue
+
+element = my_queue.get()                  # Remove and return the element at the front of the queue
+
+size = my_queue.qsize()                   # Get the number of elements in the queue
+
+is_empty = my_queue.empty()               # Check if the queue is empty
+
+-----------------------Stack-------------------------
+
+Implemented using list
+
+my_stack = []
+
+my_stack.append(1)                  # Push an element onto the stack
+my_stack.append(2)                  # Push another element onto the stack
+
+element = my_stack.pop()            # Pop and return the top element from the stack
+
+is_empty = len(my_stack) == 0       # Check if the stack is empty
+
+size = len(my_stack)                # Get the number of elements in the stack
+
+top_element = my_stack[-1]          # Access the top element of the stack
+
+-----------------------Pair-------------------------
+
+implemented using tuples
+
+my_pair = (value1, value2)        # Create a pair with two values
+
+first_element = my_pair[0]        # Access the first element of the pair
+second_element = my_pair[1]       # Access the second element of the pair
+
+first, second = my_pair           # Unpack the pair into individual variables
+
+# Tuples are immutable, so you cannot modify individual elements directly.
+# You would need to create a new tuple with the desired modifications.
+
+pair1 = (1, 2)
+pair2 = (3, 4)
+are_equal = pair1 == pair2        # Check if two pairs are equal
+
+-----------------------tuple-------------------------
+
+my_tuple = ()                      # Create an empty tuple
+my_tuple = (1, 2, 3)               # Create a tuple with initial values
+my_tuple = 1, 2, 3                 # Tuple can be created without parentheses
+
+value = my_tuple[0]                # Access an element by index
+
+my_tuple = 1, 2, 3                 # Tuple packing
+a, b, c = my_tuple                 # Tuple unpacking into separate variables
+
+length = len(my_tuple)             # Get the number of elements in the tuple
+
+tuple1 = (1, 2)
+tuple2 = (3, 4)
+concatenated_tuple = tuple1 + tuple2    # Concatenate two tuples
+
+repeated_tuple = (1, 2) * 3              # Repeat a tuple multiple times
+
+tuple1 = (1, 2)
+tuple2 = (3, 4)
+are_equal = tuple1 == tuple2             # Check if two tuples are equal
+
+-----------------------list vs tuple-------------------------
+
+Dictionary Keys: Tuples can be used as keys in dictionaries, while lists cannot.
+Since dictionary keys need to be immutable, tuples provide a suitable option when you need to use composite keys consisting of multiple values.
+
+Sequence Unpacking: Tuples are commonly used for sequence unpacking, where multiple values are assigned to multiple variables in a single statement.
+This feature is particularly useful when working with functions that return multiple values or when dealing with complex data structures.
+
+Performance Considerations: Tuples are generally more efficient than lists in terms of memory usage and performance. Since tuples are immutable,
+Python can optimize their storage and access. This can be advantageous when working with large datasets or in performance-critical applications.
+
+-----------------------named tuple-------------------------
+
+from collections import namedtuple
+
+Point = namedtuple('Point', ['x', 'y'])
+
+p1 = Point(2, 3)          # Create an instance of the named tuple
+p2 = Point(x=4, y=5)      # Create another instance using keyword arguments
+
+print(p1.x)               # Access the 'x' field of p1
+print(p2.y)               # Access the 'y' field of p2
+
+-----------------------named tuple to dictionary conversion-------------------------
+
+from collections import namedtuple
+
+# Define a named tuple
+Point = namedtuple('Point', ['x', 'y'])
+
+# Create an instance of the named tuple
+p = Point(2, 3)
+
+# Convert the named tuple to a dictionary
+p_dict = p._asdict()
+
+print(p_dict)  # Output: OrderedDict([('x', 2), ('y', 3)])
+
+p_dict = dict(p_dict)
+print(p_dict)  # Output: {'x': 2, 'y': 3}
+
+-----------------------Ordered Dict-------------------------
+
+Useful when the order of elements matters and needs to be preserved.
+
+Useful for tasks like maintaining a history of key-value pairs or implementing LRU (Least Recently Used) cache.
+
+-----------------------Priority Queue-------------------------
+
+from queue import PriorityQueue
+
+# Create a priority queue
+pq = PriorityQueue()
+
+# Enqueue elements with priority
+pq.put((3, 'Task 1'))     # (priority, data)
+pq.put((1, 'Task 2'))
+pq.put((2, 'Task 3'))
+
+# Dequeue elements based on priority
+while not pq.empty():
+    priority, data = pq.get()
+    print(f"Processing '{data}' with priority {priority}")
+
+  Result --> (  Processing 'Task 2' with priority 1
+    Processing 'Task 3' with priority 2
+    Processing 'Task 1' with priority 3)
+
+
+-----------------------Array-------------------------
+
+import array
+
+# Create an array of integers
+my_array = array.array('i', [1, 2, 3, 4, 5])
+
+# Access elements of the array
+print(my_array[0])    # Output: 1
+print(my_array[2])    # Output: 3
+
+# Modify an element of the array
+my_array[1] = 10
+
+# Iterate over the elements of the array
+for element in my_array:
+    print(element)
+
+# Get the length of the array
+print(len(my_array))  # Output: 5
+
+
+-----------------------sorting the list-------------------------
+
+my_list = [4, 2, 1, 3]
+my_list.sort()
+print(my_list)  # Output: [1, 2, 3, 4]
+
+my_list = [4, 2, 1, 3]
+sorted_list = sorted(my_list)
+print(sorted_list)  # Output: [1, 2, 3, 4]
+
+my_list = ['banana', 'apple', 'cherry']
+my_list.sort(reverse=True)
+print(my_list)  # Output: ['cherry', 'banana', 'apple']
+
+sorted_list = sorted(my_list, reverse=True)
+print(sorted_list)  # Output: ['cherry', 'banana', 'apple']
+
+
+-----------------------list vs java array-------------------------
+
+int[] ar = new int[5];
+Arrays.fill(ar, 10);
+
+ar = [10] * 5
+
+
+
+intervals = [(2, 4), (1, 3), (5, 7), (4, 6), (3, 5)]
+
+# Sort intervals based on start values
+sorted_intervals = sorted(intervals, key=lambda x: x[0])
+
+print(sorted_intervals)
+
+Result --> [(1, 3), (2, 4), (3, 5), (4, 6), (5, 7)]
+
+
+-----------------------shallow copy vs deep copy-------------------------
+
+import copy
+
+original_list = [1, [2, 3], 4, 5]
+shallow_copy = original_list.copy()
+shallow_copy[1][0] = 'modified'
+print(original_list)   # Output: [1, ['modified', 3], 4, 5]
+
+
+import copy
+
+original_list = [1, [2, 3], 4, 5]
+deep_copy = copy.deepcopy(original_list)
+deep_copy[1][0] = 'modified'
+print(original_list)   # Output: [1, [2, 3], 4, 5]
+
+
+-----------------------shallow copy-------------------------
+
+original_list = [1, 2, 3, 4, 5]
+cloned_list = original_list.copy()
+
+original_list = [1, 2, 3, 4, 5]
+cloned_list = list(original_list)
+
+original_list = [1, 2, 3, 4, 5]
+cloned_list = original_list[:]
+
+
+-----------------------map.keySet in java-------------------------
+
+map = {"key1": 1, "key2": 2, "key3": 3}
+
+key_set = map.keys()
+
+key_set = set(map.keys())
+
+
+-----------------------String-------------------------
+
+string = "Hello, World!"
+for index, char in enumerate(string):
+    print(index, char)
+
+-----------------------stop going to new line while print-------------------------
+
+string = "Hello, World!"
+for char in string:
+    print(char, end='')
+
+By default, the end parameter is set to '\n'
+
+    
